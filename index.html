@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sachin Lolariya — Frontend Developer</title>
+  <meta name="description" content="Creative Frontend Developer building modern digital experiences. React, Next.js, TypeScript specialist." />
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       LOADER
+  ═══════════════════════════════════════════ -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-name">
+        <span class="loader-first">SACHIN</span>
+        <span class="loader-last">LOLARIYA</span>
+      </div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar"></div>
+      </div>
+      <div class="loader-counter"><span id="loader-count">0</span><span>%</span></div>
+    </div>
+    <div class="loader-overlay"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════════ -->
+  <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid px-4 px-lg-5">
+      <a class="navbar-brand" href="#hero">SL<span class="brand-dot">.</span></a>
+      <button class="navbar-toggler" id="hamburger" type="button" aria-label="Toggle navigation">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-1 gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <a href="mailto:sachinlolariya@gmail.com" class="nav-cta ms-lg-4">Hire Me</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Overlay -->
+  <div id="mobileNav">
+    <ul>
+      <li><a href="#about" class="mob-link">About</a></li>
+      <li><a href="#skills" class="mob-link">Skills</a></li>
+      <li><a href="#projects" class="mob-link">Projects</a></li>
+      <li><a href="#experience" class="mob-link">Experience</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section id="hero">
+    <!-- Animated BG orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <!-- Grid overlay -->
+    <div class="hero-grid"></div>
+
+    <div class="container-fluid px-4 px-lg-5 hero-content">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-7 order-2 order-lg-1">
+          <p class="hero-eyebrow" id="hero-eyebrow">
+            <span class="eye-line"></span>Frontend Developer
+          </p>
+          <h1 class="hero-title" id="hero-title">
+            <span class="title-line">Creative</span>
+            <span class="title-line accent-line">Frontend</span>
+            <span class="title-line">Developer</span>
+          </h1>
+          <p class="hero-sub" id="hero-sub">
+            Building modern digital experiences with React, Next.js &amp; TypeScript — blending clean architecture with pixel-perfect design.
+          </p>
+          <div class="hero-ctas" id="hero-ctas">
+            <a href="#projects" class="btn-primary-custom">View Work <i class="bi bi-arrow-right"></i></a>
+            <a href="#contact" class="btn-ghost-custom">Let's Talk</a>
+          </div>
+          <div class="hero-stats" id="hero-stats">
+            <div class="stat-item">
+              <span class="stat-num" data-target="3">0</span><span class="stat-suf">+</span>
+              <span class="stat-label">Years Exp.</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="20">0</span><span class="stat-suf">+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="10">0</span><span class="stat-suf">+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 order-1 order-lg-2 d-flex justify-content-center justify-content-lg-end">
+          <div class="hero-img-wrap" id="hero-img">
+            <div class="img-glow"></div>
+            <div class="img-border-ring"></div>
+            <img src="https://ui-avatars.com/api/?name=Sachin+Lolariya&size=400&background=7c3aed&color=fff&bold=true&font-size=0.35" alt="Sachin Lolariya" class="profile-img" loading="lazy" />
+            <div class="img-badge">
+              <i class="bi bi-code-slash"></i> Open to Work
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       MARQUEE STRIP
+  ═══════════════════════════════════════════ -->
+  <div class="marquee-strip">
+    <div class="marquee-track" id="marqueeTrack">
+      <span>React</span><span class="dot">◆</span>
+      <span>Next.js</span><span class="dot">◆</span>
+      <span>TypeScript</span><span class="dot">◆</span>
+      <span>JavaScript</span><span class="dot">◆</span>
+      <span>Node.js</span><span class="dot">◆</span>
+      <span>Tailwind CSS</span><span class="dot">◆</span>
+      <span>MongoDB</span><span class="dot">◆</span>
+      <span>PostgreSQL</span><span class="dot">◆</span>
+      <span>REST APIs</span><span class="dot">◆</span>
+      <span>Git / GitHub</span><span class="dot">◆</span>
+      <span>React</span><span class="dot">◆</span>
+      <span>Next.js</span><span class="dot">◆</span>
+      <span>TypeScript</span><span class="dot">◆</span>
+      <span>JavaScript</span><span class="dot">◆</span>
+      <span>Node.js</span><span class="dot">◆</span>
+      <span>Tailwind CSS</span><span class="dot">◆</span>
+      <span>MongoDB</span><span class="dot">◆</span>
+      <span>PostgreSQL</span><span class="dot">◆</span>
+      <span>REST APIs</span><span class="dot">◆</span>
+      <span>Git / GitHub</span><span class="dot">◆</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════════ -->
+  <section id="about" class="section-pad">
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <div class="about-img-container reveal-left">
+            <div class="about-img-bg"></div>
+            <img src="https://ui-avatars.com/api/?name=SL&size=500&background=0f0f1a&color=7c3aed&bold=true&font-size=0.4" alt="Sachin" class="about-img" loading="lazy" />
+            <div class="about-exp-badge">
+              <span class="exp-num">3+</span>
+              <span class="exp-txt">Years of<br>Experience</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="about-text reveal-right">
+            <p class="section-label">// About Me</p>
+            <h2 class="section-title">Crafting Experiences,<br /><em>Not Just Code</em></h2>
+            <p class="about-body">
+              I'm <strong>Sachin Lolariya</strong>, a passionate Frontend Developer based in Rajkot, Gujarat. I specialize in building high-performance, accessible, and beautiful web applications that bridge the gap between design vision and technical reality.
+            </p>
+            <p class="about-body">
+              Currently working at <strong>Vasundhara Infotech</strong>, I craft scalable React and Next.js applications, contribute to open-source, and constantly explore the cutting edge of the modern web ecosystem.
+            </p>
+            <div class="about-tags">
+              <span class="tag">🎓 B.Tech Computer Science</span>
+              <span class="tag">📍 Rajkot, Gujarat</span>
+              <span class="tag">💼 Vasundhara Infotech</span>
+              <span class="tag">🚀 Open to Remote</span>
+            </div>
+            <a href="mailto:sachinlolariya@gmail.com" class="btn-primary-custom mt-4 d-inline-flex">
+              Download CV <i class="bi bi-download ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SKILLS
+  ═══════════════════════════════════════════ -->
+  <section id="skills" class="section-pad">
+    <div class="skills-bg-glow"></div>
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="text-center mb-5">
+        <p class="section-label">// Tech Stack</p>
+        <h2 class="section-title reveal-title">Skills &amp; Technologies</h2>
+      </div>
+
+      <!-- Skill category cards -->
+      <div class="row g-4">
+
+        <!-- Frontend -->
+        <div class="col-lg-4 col-md-6 skill-card-wrap">
+          <div class="skill-card glass-card">
+            <div class="skill-card-icon"><i class="bi bi-layout-text-window-reverse"></i></div>
+            <h4>Frontend</h4>
+            <div class="skill-list">
+              <div class="skill-item">
+                <span>React.js</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="92"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>Next.js</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="88"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>TypeScript</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>JavaScript (ES6+)</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="93"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>HTML5 / CSS3</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="95"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Styling -->
+        <div class="col-lg-4 col-md-6 skill-card-wrap">
+          <div class="skill-card glass-card">
+            <div class="skill-card-icon"><i class="bi bi-palette2"></i></div>
+            <h4>Styling & UI</h4>
+            <div class="skill-list">
+              <div class="skill-item">
+                <span>Tailwind CSS</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>Bootstrap 5</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="88"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>Material UI</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="82"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>Framer Motion</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="78"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>SASS/SCSS</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend / DB -->
+        <div class="col-lg-4 col-md-6 skill-card-wrap">
+          <div class="skill-card glass-card">
+            <div class="skill-card-icon"><i class="bi bi-server"></i></div>
+            <h4>Backend & DB</h4>
+            <div class="skill-list">
+              <div class="skill-item">
+                <span>Node.js</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>Express.js</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="75"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>MongoDB</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="78"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>PostgreSQL</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="72"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>REST APIs</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="88"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="col-lg-4 col-md-6 skill-card-wrap">
+          <div class="skill-card glass-card">
+            <div class="skill-card-icon"><i class="bi bi-tools"></i></div>
+            <h4>Tools & DevOps</h4>
+            <div class="skill-list">
+              <div class="skill-item">
+                <span>Git / GitHub</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="92"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>VS Code</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="95"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>Figma</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="75"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>Vercel / Netlify</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>Jira / Agile</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="78"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- State Management -->
+        <div class="col-lg-4 col-md-6 skill-card-wrap">
+          <div class="skill-card glass-card">
+            <div class="skill-card-icon"><i class="bi bi-diagram-3"></i></div>
+            <h4>State & Data</h4>
+            <div class="skill-list">
+              <div class="skill-item">
+                <span>Redux / RTK</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>Zustand</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>React Query</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="82"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>Context API</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
+              </div>
+              <div class="skill-item">
+                <span>GraphQL</span>
+                <div class="skill-bar"><div class="skill-fill" data-w="68"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="col-lg-4 col-md-6 skill-card-wrap">
+          <div class="skill-card glass-card glow-card">
+            <div class="skill-card-icon"><i class="bi bi-stars"></i></div>
+            <h4>Soft Skills</h4>
+            <div class="soft-skill-tags">
+              <span>Problem Solving</span>
+              <span>Team Collaboration</span>
+              <span>Code Review</span>
+              <span>Agile / Scrum</span>
+              <span>Mentoring</span>
+              <span>Communication</span>
+              <span>Time Management</span>
+              <span>Attention to Detail</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PROJECTS
+  ═══════════════════════════════════════════ -->
+  <section id="projects" class="section-pad">
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="text-center mb-5">
+        <p class="section-label">// Selected Work</p>
+        <h2 class="section-title reveal-title">Featured Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card reveal-card" data-index="01">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="E-commerce Platform" loading="lazy" class="project-img" />
+            <div class="project-overlay">
+              <a href="#" class="proj-link" aria-label="Live Demo"><i class="bi bi-arrow-up-right"></i></a>
+              <a href="https://github.com/sachinlolariya" class="proj-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="proj-num">01</span>
+            <h3 class="proj-title">E-Commerce Platform</h3>
+            <p class="proj-desc">Full-stack e-commerce solution with cart, payments, order tracking, and admin dashboard. Built with Next.js, Stripe, and MongoDB.</p>
+            <div class="proj-tags">
+              <span>Next.js</span><span>TypeScript</span><span>MongoDB</span><span>Stripe</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal-card" data-index="02">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Dashboard App" loading="lazy" class="project-img" />
+            <div class="project-overlay">
+              <a href="#" class="proj-link" aria-label="Live Demo"><i class="bi bi-arrow-up-right"></i></a>
+              <a href="https://github.com/sachinlolariya" class="proj-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="proj-num">02</span>
+            <h3 class="proj-title">Analytics Dashboard</h3>
+            <p class="proj-desc">Real-time analytics dashboard with interactive charts, dark mode, and responsive layout. Powered by React, Recharts, and REST APIs.</p>
+            <div class="proj-tags">
+              <span>React</span><span>Redux</span><span>Recharts</span><span>Node.js</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal-card" data-index="03">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80" alt="Social App" loading="lazy" class="project-img" />
+            <div class="project-overlay">
+              <a href="#" class="proj-link" aria-label="Live Demo"><i class="bi bi-arrow-up-right"></i></a>
+              <a href="https://github.com/sachinlolariya" class="proj-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="proj-num">03</span>
+            <h3 class="proj-title">Social Media App</h3>
+            <p class="proj-desc">Feature-rich social platform with real-time messaging, post feed, notifications, and media uploads. Socket.io powered live updates.</p>
+            <div class="proj-tags">
+              <span>React</span><span>Socket.io</span><span>Express</span><span>MongoDB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal-card" data-index="04">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80" alt="Mobile App" loading="lazy" class="project-img" />
+            <div class="project-overlay">
+              <a href="#" class="proj-link" aria-label="Live Demo"><i class="bi bi-arrow-up-right"></i></a>
+              <a href="https://github.com/sachinlolariya" class="proj-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="proj-num">04</span>
+            <h3 class="proj-title">Task Management App</h3>
+            <p class="proj-desc">Collaborative project management tool with drag-and-drop kanban boards, team workspaces, and deadline tracking.</p>
+            <div class="proj-tags">
+              <span>Next.js</span><span>Zustand</span><span>PostgreSQL</span><span>Prisma</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card reveal-card" data-index="05">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80" alt="Portfolio Builder" loading="lazy" class="project-img" />
+            <div class="project-overlay">
+              <a href="#" class="proj-link" aria-label="Live Demo"><i class="bi bi-arrow-up-right"></i></a>
+              <a href="https://github.com/sachinlolariya" class="proj-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="proj-num">05</span>
+            <h3 class="proj-title">Portfolio Builder SaaS</h3>
+            <p class="proj-desc">Drag-and-drop portfolio builder with live preview, custom domains, and one-click deployment to Vercel.</p>
+            <div class="proj-tags">
+              <span>Next.js</span><span>TypeScript</span><span>Stripe</span><span>Tailwind</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card reveal-card" data-index="06">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80" alt="AI Chat" loading="lazy" class="project-img" />
+            <div class="project-overlay">
+              <a href="#" class="proj-link" aria-label="Live Demo"><i class="bi bi-arrow-up-right"></i></a>
+              <a href="https://github.com/sachinlolariya" class="proj-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="proj-num">06</span>
+            <h3 class="proj-title">AI Chat Interface</h3>
+            <p class="proj-desc">ChatGPT-like UI with streaming responses, conversation history, and multi-model support. Integrated with OpenAI API.</p>
+            <div class="proj-tags">
+              <span>React</span><span>OpenAI API</span><span>Node.js</span><span>SSE</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="https://github.com/sachinlolariya" target="_blank" class="btn-ghost-custom">
+          View All on GitHub <i class="bi bi-github ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       EXPERIENCE / EDUCATION TIMELINE
+  ═══════════════════════════════════════════ -->
+  <section id="experience" class="section-pad">
+    <div class="exp-bg-glow"></div>
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="text-center mb-5">
+        <p class="section-label">// Journey</p>
+        <h2 class="section-title reveal-title">Experience &amp; Education</h2>
+      </div>
+
+      <div class="row g-5">
+        <!-- Experience -->
+        <div class="col-lg-6">
+          <h3 class="timeline-col-title"><i class="bi bi-briefcase-fill"></i> Work Experience</h3>
+          <div class="timeline">
+            <div class="timeline-line" id="tl-line-1"></div>
+
+            <div class="tl-item reveal-tl">
+              <div class="tl-dot"></div>
+              <div class="tl-card glass-card">
+                <div class="tl-header">
+                  <span class="tl-date">2023 — Present</span>
+                  <span class="tl-badge current">Current</span>
+                </div>
+                <h4>Frontend Developer</h4>
+                <p class="tl-company"><i class="bi bi-building"></i> Vasundhara Infotech, Rajkot</p>
+                <ul class="tl-points">
+                  <li>Built scalable React & Next.js applications serving thousands of users</li>
+                  <li>Improved application performance by 40% through code optimization</li>
+                  <li>Led frontend architecture decisions for 5+ major product features</li>
+                  <li>Mentored junior developers and conducted code reviews</li>
+                </ul>
+                <div class="tl-tech">
+                  <span>React</span><span>Next.js</span><span>TypeScript</span><span>Tailwind</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tl-item reveal-tl">
+              <div class="tl-dot"></div>
+              <div class="tl-card glass-card">
+                <div class="tl-header">
+                  <span class="tl-date">2022 — 2023</span>
+                </div>
+                <h4>Junior Frontend Developer</h4>
+                <p class="tl-company"><i class="bi bi-building"></i> Tech Startup, Rajkot</p>
+                <ul class="tl-points">
+                  <li>Developed and maintained responsive web applications using React</li>
+                  <li>Implemented pixel-perfect UI from Figma designs</li>
+                  <li>Integrated RESTful APIs and managed state with Redux</li>
+                </ul>
+                <div class="tl-tech">
+                  <span>React</span><span>Redux</span><span>CSS3</span><span>REST APIs</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tl-item reveal-tl">
+              <div class="tl-dot"></div>
+              <div class="tl-card glass-card">
+                <div class="tl-header">
+                  <span class="tl-date">2021 — 2022</span>
+                </div>
+                <h4>Web Development Intern</h4>
+                <p class="tl-company"><i class="bi bi-building"></i> Digital Agency</p>
+                <ul class="tl-points">
+                  <li>Built interactive landing pages and marketing websites</li>
+                  <li>Learned industry best practices and Git workflow</li>
+                </ul>
+                <div class="tl-tech">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="col-lg-6">
+          <h3 class="timeline-col-title"><i class="bi bi-mortarboard-fill"></i> Education</h3>
+          <div class="timeline">
+            <div class="timeline-line" id="tl-line-2"></div>
+
+            <div class="tl-item reveal-tl">
+              <div class="tl-dot"></div>
+              <div class="tl-card glass-card">
+                <div class="tl-header">
+                  <span class="tl-date">2019 — 2023</span>
+                  <span class="tl-badge">B.Tech</span>
+                </div>
+                <h4>Bachelor of Technology</h4>
+                <p class="tl-company"><i class="bi bi-building"></i> Computer Science & Engineering</p>
+                <ul class="tl-points">
+                  <li>Specialized in Software Engineering and Web Technologies</li>
+                  <li>Final year project: Full-stack E-commerce Platform</li>
+                  <li>Active member of coding club and hackathon participant</li>
+                </ul>
+                <div class="tl-tech">
+                  <span>DSA</span><span>DBMS</span><span>OS</span><span>Networks</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tl-item reveal-tl">
+              <div class="tl-dot"></div>
+              <div class="tl-card glass-card">
+                <div class="tl-header">
+                  <span class="tl-date">2023</span>
+                  <span class="tl-badge">Cert</span>
+                </div>
+                <h4>Meta Frontend Developer</h4>
+                <p class="tl-company"><i class="bi bi-award"></i> Meta / Coursera Professional Certificate</p>
+                <ul class="tl-points">
+                  <li>Advanced React patterns and performance optimization</li>
+                  <li>Frontend testing strategies and CI/CD pipelines</li>
+                </ul>
+                <div class="tl-tech">
+                  <span>React</span><span>Testing</span><span>CI/CD</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tl-item reveal-tl">
+              <div class="tl-dot"></div>
+              <div class="tl-card glass-card">
+                <div class="tl-header">
+                  <span class="tl-date">2022</span>
+                  <span class="tl-badge">Cert</span>
+                </div>
+                <h4>Full Stack Web Development</h4>
+                <p class="tl-company"><i class="bi bi-award"></i> Udemy — MERN Stack Bootcamp</p>
+                <ul class="tl-points">
+                  <li>Built 15+ projects covering MERN stack development</li>
+                  <li>Authentication, deployment, and database design</li>
+                </ul>
+                <div class="tl-tech">
+                  <span>MERN</span><span>JWT</span><span>MongoDB</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════ -->
+  <section id="contact" class="section-pad">
+    <div class="contact-glow"></div>
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <p class="section-label">// Get In Touch</p>
+          <h2 class="section-title reveal-title">Let's Build Something<br /><em>Amazing Together</em></h2>
+          <p class="contact-sub">I'm currently open to new opportunities — whether it's a full-time role, freelance project, or just an interesting conversation. My inbox is always open.</p>
+        </div>
+      </div>
+
+      <div class="row g-5 mt-2 align-items-start justify-content-center">
+        <!-- Contact Info -->
+        <div class="col-lg-4">
+          <div class="contact-info-wrap">
+            <div class="contact-info-item glass-card" id="emailCard">
+              <i class="bi bi-envelope-fill"></i>
+              <div>
+                <p class="ci-label">Email</p>
+                <p class="ci-val" id="emailVal">sachinlolariya@gmail.com</p>
+              </div>
+              <button class="copy-btn" id="copyEmail" title="Copy email"><i class="bi bi-copy"></i></button>
+            </div>
+            <div class="contact-info-item glass-card">
+              <i class="bi bi-geo-alt-fill"></i>
+              <div>
+                <p class="ci-label">Location</p>
+                <p class="ci-val">Rajkot, Gujarat, India</p>
+              </div>
+            </div>
+            <div class="contact-info-item glass-card">
+              <i class="bi bi-clock-fill"></i>
+              <div>
+                <p class="ci-label">Availability</p>
+                <p class="ci-val">Open to work — Full-time &amp; Freelance</p>
+              </div>
+            </div>
+
+            <!-- Socials -->
+            <div class="social-links mt-4">
+              <a href="https://linkedin.com/in/sachinlolariya" target="_blank" class="social-btn" aria-label="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="https://github.com/sachinlolariya" target="_blank" class="social-btn" aria-label="GitHub">
+                <i class="bi bi-github"></i>
+              </a>
+              <a href="https://twitter.com/sachinlolariya" target="_blank" class="social-btn" aria-label="Twitter">
+                <i class="bi bi-twitter-x"></i>
+              </a>
+              <a href="mailto:sachinlolariya@gmail.com" class="social-btn" aria-label="Email">
+                <i class="bi bi-envelope-fill"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-lg-7">
+          <div class="contact-form glass-card">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="form-float">
+                  <input type="text" id="fname" class="form-input" placeholder=" " autocomplete="off" />
+                  <label for="fname">Your Name</label>
+                  <div class="input-line"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-float">
+                  <input type="email" id="femail" class="form-input" placeholder=" " autocomplete="off" />
+                  <label for="femail">Email Address</label>
+                  <div class="input-line"></div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-float">
+                  <input type="text" id="fsubject" class="form-input" placeholder=" " autocomplete="off" />
+                  <label for="fsubject">Subject</label>
+                  <div class="input-line"></div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-float">
+                  <textarea id="fmessage" class="form-input form-textarea" placeholder=" " rows="5"></textarea>
+                  <label for="fmessage">Your Message</label>
+                  <div class="input-line"></div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn-primary-custom w-100 justify-content-center" id="sendBtn">
+                  <span id="sendBtnText">Send Message</span>
+                  <i class="bi bi-send-fill ms-2" id="sendIcon"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="footer-glow"></div>
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="footer-inner">
+        <div class="footer-brand">SL<span class="brand-dot">.</span></div>
+        <p class="footer-copy">Designed &amp; Built by <strong>Sachin Lolariya</strong> · 2025</p>
+        <div class="footer-socials">
+          <a href="https://linkedin.com/in/sachinlolariya" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/sachinlolariya" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="https://twitter.com/sachinlolariya" target="_blank" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- Back to top -->
+    <button id="backToTop" aria-label="Back to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast" class="copy-toast">Email copied! <i class="bi bi-check-circle-fill"></i></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
